@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="author" content="OpenBuilds">
+  <meta name="description" content="Download page for OpenBuilds Software">
+  <meta name="keywords" content="grbl, host, machine, drivers, openbuilds">
+
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+  <link href="/metro4/css/metro-all.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+
+  <title>Download OpenBuilds Software</title>
+
+
+  <style>
+    .login-form {
+      width: 90%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body class="h-vh-100 bg-openbuilds">
+
+  <form class="login-form bg-white p-6 mx-auto border bd-default win-shadow" style="overflow-y: auto;">
+    <span class="mif-download2 mif-4x place-right" style="margin-top: -10px;"></span>
+    <a class="fg-dark" href="https://download.openbuilds.com"><h2>OpenBuilds Free Software</h2></a>
+    <hr class="thin mt-4 mb-4 bg-gray" />
+    <!-- <hr class="thin mt-4 mb-4 bg-white"> -->
+
+    <div class="row">
+      <div class="cell-sm-full cell-md-4 cell-lg-4">
+
+        <div data-role="carousel" data-height="4/3" data-control-next="<span class='mif-chevron-right fg-openbuilds'></span>" data-control-prev="<span class='mif-chevron-left fg-openbuilds'></span>">
+          <div class="slide" data-cover="driver.png"></div>
+          <div class="slide" data-cover="driver2.png"></div>
+          <div class="slide" data-cover="driver3.png"></div>
+          <div class="slide" data-cover="driver4.png"></div>
+        </div>
+
+        <!-- <div class="img-container">
+
+          <img class="img-small" src="driver.png" />
+        </div> -->
+      </div>
+      <div class="cell-sm-full cell-md-8 cell-lg-8">
+        <table style="height: 100%;">
+          <tr>
+            <td valign="top" style="vertical-align: top;">
+
+              <h3 class="text-light">OpenBuilds Machine Driver</h3>
+
+              <p class="text-secondary">OpenBuilds Machine Driver is an application for connecting to, and controlling, your CNC machine.</p>
+              <p class="text-small">This will allow you to
+                <ul>
+                  <li class="text-small">Interface with, and Jog your machine</li>
+                  <li class="text-small">Run GCODE Jobs</li>
+                  <li class="text-small">Set Zero coordinates</li>
+                  <li class="text-small">Integrate with <a href="https://cam.openbuilds.com" target="_new">cam.openbuilds.com</a></li>
+                  <li class="text-small">and even help with your Firmware configuration</li>
+                </ul>
+              </p>
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="bottom" style="vertical-align: bottom;">
+              <nav data-role="ribbonmenu">
+                <ul class="tabs-holder">
+                  <li><a href="#tab-win"><i class="fab fa-windows"></i> Windows</a></li>
+                  <li><a href="#tab-mac"><i class="fab fa-apple"></i> Mac</a></li>
+                  <li><a href="#tab-linux"><i class="fab fa-linux"></i> Linux</a></li>
+                </ul>
+
+                <div class="content-holder">
+                  <div class="section" id="tab-win">
+                    <div class="info-button bg-green fg-white bd-green">
+                      <a href="#" onclick="downloadDrivers('win')" class="button"><span class="fab fa-windows"></span> Download Windows Driver (EXE)</a>
+                      <a href="#" class="info omdavailversion">v1.0.0</a>
+                    </div><br>
+                  </div>
+                  <div class="section" id="tab-mac">
+                    <div class="info-button bg-green fg-white bd-green">
+                      <a href="#" onclick="downloadDrivers('mac')" class="button"><span class="fab fa-apple"></span> Download MacOS Driver (DMG)</a>
+                      <a href="#" class="info omdavailversion">v1.0.0</a>
+                    </div><br>
+                  </div>
+                  <div class="section" id="tab-linux">
+                    <div>
+                      <div class="info-button bg-green fg-white bd-green mr-2">
+                        <a href="#" onclick="downloadDrivers('deb')" class="button"><span class="fab fa-linux"></span> Linux Driver (DEB)</a>
+                        <a href="#" class="info omdavailversion">v1.0.0</a>
+                      </div>
+                      <div class="info-button bg-green fg-white bd-green">
+                        <a href="#" onclick="downloadDrivers('appimage')" class="button"><span class="fab fa-linux"></span> Linux Driver (AppImage)</a>
+                        <a href="#" class="info omdavailversion">v1.0.0</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <hr class="thin mt-4 mb-4 bg-gray" />
+    <div class="row">
+      <div class="cell-sm-full cell-md-4 cell-lg-4">
+        <div data-role="carousel" data-height="4/3" data-control-next="<span class='mif-chevron-right fg-openbuilds'></span>" data-control-prev="<span class='mif-chevron-left fg-openbuilds'></span>">
+          <div class="slide" data-cover="cam.png"></div>
+          <div class="slide" data-cover="cam2.png"></div>
+          <div class="slide" data-cover="cam3.png"></div>
+        </div>
+      </div>
+      <div class="cell-sm-full cell-md-8 cell-lg-8">
+        <table style="height: 100%;">
+          <tr>
+            <td valign="top" style="vertical-align: top;">
+
+              <h3 class="text-light">OpenBuilds CAM - GCODE Generator</h3>
+
+              <p class="text-secondary">OpenBuilds CAM is a web-based application for converting SVG, DXF and Bitmap drawings, to GCODE</p>
+              <p class="text-small">This will allow you to
+                <ul>
+                  <li class="text-small">Import DXF/SVG/PNG/BMP/JPG files</li>
+                  <li class="text-small">Import from a built-in Parts Library</li>
+                  <li class="text-small">Setup toolpaths for CNC Routing, Laser cutting and Plasma Cutting</li>
+                  <li class="text-small">Generate GCODE</li>
+                  <li class="text-small">Send GCODE to the OpenBuilds Machine Library</li>
+                </ul>
+              </p>
+
+            </td>
+          </tr>
+          <tr>
+            <td valign="bottom" style="vertical-align: bottom;">
+
+              <div class="info-button bg-green fg-white bd-green">
+                <a href="https://cam.openbuilds.com" target="_new" class="button"><span class="fas fa-link"></span> Browse to</a>
+                <a href="https://cam.openbuilds.com" target="_new" class="info">https://cam.openbuilds.com</a>
+              </div>
+
+
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </form>
+
+
+
+  <script type="text/javascript" src="fontawesome5/js/all.js"></script>
+  <script src="jquery.min.js"></script>
+  <script src="/metro4/js/metro.js"></script>
+  <script src="index.js"></script>
+
+</body>
+
+</html>

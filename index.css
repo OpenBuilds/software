@@ -1,0 +1,12 @@
+/* OpenBuilds Navbar for MetroWindows */
+.fg-openbuilds {
+  color: rgb(74, 78, 81) !important;
+}
+.bg-openbuilds {
+  background-color: rgb(74, 78, 81) !important;
+}
+
+.img-container .img-small {
+  max-height: 90%;
+  height: 90%;
+}
