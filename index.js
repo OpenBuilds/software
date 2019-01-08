@@ -3,6 +3,20 @@ var alreadyDetected = false;
 var availableDriverVersion = 'v0.0.0'
 var installedDriver = 'not detected'
 
+function getChangelog() {
+  $("#changelog").empty()
+  var template2 = `<ul>`
+  $.get("https://raw.githubusercontent.com/openbuilds/cam/master/CHANGELOG.txt", function(data) {
+    var lines = data.split('\n');
+    for (var line = 0; line < 15; line++) {
+      template2 += '<li>' + lines[line] + '</li>'
+    }
+    template2 += `</ul>`
+    $("#changelog").html(template2);
+  });
+}
+
+
 function checkIfDriverIsInstalled() {
   // if (!alreadyDetected) {
   var url = "https://mymachine.openbuilds.com:3001/api/version"
@@ -54,7 +68,7 @@ $(document).ready(function() {
 
   noDriver();
   getAvailableDriverVersion()
-
+  getChangelog()
 });
 
 function hasDriver(version) {

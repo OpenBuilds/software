@@ -36,7 +36,9 @@
     <div class="row">
       <div class="cell-sm-full cell-md-4 cell-lg-4">
 
-        <div data-role="carousel" data-height="4/3" data-control-next="<span class='mif-chevron-right fg-openbuilds'></span>" data-control-prev="<span class='mif-chevron-left fg-openbuilds'></span>">
+        <div data-role="carousel" data-period="2000" data-effect="slide" data-effect-func="easeInQuart" data-auto-start="true" data-duration="200" data-height="4/3" data-control-next="<span class='mif-chevron-right fg-openbuilds'></span>" data-control-prev="<span class='mif-chevron-left fg-openbuilds'></span>">
+          <div class="slide" data-cover="gifs/z0probe.gif"></div>
+          <div class="slide" data-cover="gifs/steps-per-mm-calib.gif"></div>
           <div class="slide" data-cover="driver.png"></div>
           <div class="slide" data-cover="driver2.png"></div>
           <div class="slide" data-cover="driver3.png"></div>
@@ -52,10 +54,8 @@
         <table style="height: 100%;">
           <tr>
             <td valign="top" style="vertical-align: top;">
-
               <h3 class="text-light">OpenBuilds CONTROL - Machine Driver</h3>
-
-              <p class="text-secondary">OpenBuilds Machine Driver is an application for connecting to, and controlling, your CNC machine.</p>
+              <p class="text-secondary">OpenBuilds CONTROL is an application for connecting to, and controlling, your CNC machine.</p>
               <p class="text-small">This will allow you to
                 <ul>
                   <li class="text-small">Interface with, and Jog your machine</li>
@@ -65,7 +65,6 @@
                   <li class="text-small">and even help with your Firmware configuration</li>
                 </ul>
               </p>
-
             </td>
           </tr>
           <tr>
@@ -110,8 +109,8 @@
           <tr>
             <td>
               <div class="remark">
-                <div class="text-small">
-                  Having trouble? Alternate Download Link: <a href="https://github.com/OpenBuilds/SW-Machine-Drivers/releases" target="_new"><i class="fab fa-github"></i> Github Releases</a>
+                <div class="text-secondary p-1">
+                  Have a question? <a href="https://openbuilds.com/threads/openbuilds-control-software.13121/" target="_new"><i class="far fa-comments"></i> OpenBuilds CONTROL support thread on OpenBuilds.com/Forums </a>
                 </div>
               </div>
             </td>
@@ -123,9 +122,8 @@
     <hr class="thin mt-4 mb-4 bg-gray" />
     <div class="row">
       <div class="cell-sm-full cell-md-4 cell-lg-4">
-        <div data-role="carousel" data-height="4/3" data-control-next="<span class='mif-chevron-right fg-openbuilds'></span>" data-control-prev="<span class='mif-chevron-left fg-openbuilds'></span>">
+        <div data-role="carousel" data-period="2000" data-effect="slide" data-effect-func="easeInQuart" data-auto-start="true" data-duration="200" data-height="4/3" data-control-next="<span class='mif-chevron-right fg-openbuilds'></span>" data-control-prev="<span class='mif-chevron-left fg-openbuilds'></span>">
           <div class="slide" data-cover="gifs/draganddropfileformats.gif"></div>
-          <div class="slide" data-cover="gifs/z0probe.gif"></div>
           <div class="slide" data-cover="cam.png"></div>
           <div class="slide" data-cover="cam2.png"></div>
           <div class="slide" data-cover="cam3.png"></div>
@@ -160,6 +158,23 @@
               </div>
 
 
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="remark">
+                <div class="text-secondary p-1">
+                  Have a question? <a href="https://openbuilds.com/threads/openbuilds-cam-software.13122/" target="_new"><i class="far fa-comments"></i> OpenBuilds CAM support thread on OpenBuilds.com/Forums </a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="remark">
+                Changelog:
+                <div id="changelog" class="text-small"></div>
+              </div>
             </td>
           </tr>
           <!-- <tr>
