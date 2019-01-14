@@ -1,0 +1,9 @@
+"its very intuitive and was super simple to setup" - Sharmstr  https://openbuilds.com/threads/openbuilds-control-software.13121/#post-72759
+
+"I just tried it and It works awesome. Thanks." - ClaudeJER https://openbuilds.com/threads/openbuilds-control-software.13121/page-3#post-74947
+
+"Great little piece of software" - Bernie Clark  https://openbuilds.com/threads/openbuilds-control-software.13121/page-3#post-75158
+
+"[The new] 'Fine Tune' feature for the steps/mm in the Grbl settings [...] I just used that and I really appreciate the step-by-step walkthrough for tuning those numbers - very cool! A whole lot easier and quicker than measuring the distances on the wasteboard. Big thanks to everyone working on this great software for continuing to improve things, it's now fitting seamlessly into my workflow and is one less thing that I have to worry about" -  Michiglenn  https://openbuilds.com/threads/openbuilds-control-software.13121/page-4#post-75465
+
+ "it works perfectly" - Shelby Teknologies https://openbuilds.com/threads/openbuilds-control-software.13121/page-4#post-75541

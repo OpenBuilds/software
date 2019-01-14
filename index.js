@@ -3,19 +3,41 @@ var alreadyDetected = false;
 var availableDriverVersion = 'v0.0.0'
 var installedDriver = 'not detected'
 
-function getChangelog() {
+function getCAMChangelog() {
   $("#changelog").empty()
   var template2 = `<ul>`
   $.get("https://raw.githubusercontent.com/openbuilds/cam/master/CHANGELOG.txt", function(data) {
     var lines = data.split('\n');
-    for (var line = 0; line < 15; line++) {
+    if (lines.length < 15) {
+      var count = lines.length - 1
+    } else {
+      var count = 15
+    }
+    for (var line = 0; line < count; line++) {
       template2 += '<li>' + lines[line] + '</li>'
     }
     template2 += `</ul>`
-    $("#changelog").html(template2);
+    $("#camchangelog").html(template2);
   });
 }
 
+function getCONTROLChangelog() {
+  $("#changelog").empty()
+  var template2 = `<ul>`
+  $.get("https://raw.githubusercontent.com/OpenBuilds/SW-Machine-Drivers/master/CHANGELOG.txt", function(data) {
+    var lines = data.split('\n');
+    if (lines.length < 15) {
+      var count = lines.length - 1
+    } else {
+      var count = 15
+    }
+    for (var line = 0; line < count; line++) {
+      template2 += '<li>' + lines[line] + '</li>'
+    }
+    template2 += `</ul>`
+    $("#controlchangelog").html(template2);
+  });
+}
 
 function checkIfDriverIsInstalled() {
   // if (!alreadyDetected) {
@@ -68,7 +90,8 @@ $(document).ready(function() {
 
   noDriver();
   getAvailableDriverVersion()
-  getChangelog()
+  getCAMChangelog()
+  getCONTROLChangelog()
 });
 
 function hasDriver(version) {
