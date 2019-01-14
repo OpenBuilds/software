@@ -6,7 +6,7 @@ var installedDriver = 'not detected'
 function getCAMChangelog() {
   $("#changelog").empty()
   var template2 = `<ul>`
-  $.get("https://raw.githubusercontent.com/openbuilds/cam/master/CHANGELOG.txt", function(data) {
+  $.get("https://raw.githubusercontent.com/openbuilds/cam/master/CHANGELOG.txt" + new Date().getTime(), function(data) {
     var lines = data.split('\n');
     if (lines.length < 15) {
       var count = lines.length - 1
@@ -24,7 +24,7 @@ function getCAMChangelog() {
 function getCONTROLChangelog() {
   $("#changelog").empty()
   var template2 = `<ul>`
-  $.get("https://raw.githubusercontent.com/OpenBuilds/SW-Machine-Drivers/master/CHANGELOG.txt", function(data) {
+  $.get("https://raw.githubusercontent.com/OpenBuilds/SW-Machine-Drivers/master/CHANGELOG.txt" + new Date().getTime(), function(data) {
     var lines = data.split('\n');
     if (lines.length < 15) {
       var count = lines.length - 1
