@@ -6,4 +6,12 @@
 
 "[The new] 'Fine Tune' feature for the steps/mm in the Grbl settings [...] I just used that and I really appreciate the step-by-step walkthrough for tuning those numbers - very cool! A whole lot easier and quicker than measuring the distances on the wasteboard. Big thanks to everyone working on this great software for continuing to improve things, it's now fitting seamlessly into my workflow and is one less thing that I have to worry about" -  Michiglenn  https://openbuilds.com/threads/openbuilds-control-software.13121/page-4#post-75465
 
- "it works perfectly" - Shelby Teknologies https://openbuilds.com/threads/openbuilds-control-software.13121/page-4#post-75541
+"it works perfectly" - Shelby Teknologies https://openbuilds.com/threads/openbuilds-control-software.13121/page-4#post-75541
+
+"I LOVE the OpenBuilds CONTROL app and the GCODE Generator. I want to have your babies now! And I'm a guy..." - Jet Jaguar https://openbuilds.com/threads/openbuilds-control-software.13121/page-5#post-75751
+
+"Love this software, loaded and ran without a hitch. Z probe is great, dont have to go anywhere else, and the macro’s. Poor mans tool changer. [...] Thanks for the software, Im really enjoing it." - Steveathome https://openbuilds.com/threads/things-you-didnt-know-about-openbuilds-software.13575/#post-76219
+
+"[The Fine Tuning Wizard ] ... That makes things super easy." - Dmhaes https://openbuilds.com/threads/openbuilds-lead-cnc.13307/page-11#post-77372
+
+"The software to run this thing is EXCELLENT. I work at a large company that produces software and this was very, very professionally done. The drivers for the USB connnection, the Control software for the machine, and the web-based CAM software all worked together first shot. Very, very well done. I'm already seeing where I want to venture off into Fusion 360 soon for my CAM work, but this is a great jumping off point." -  RoosterTX https://openbuilds.com/builds/lead-cnc-build-mansfield-texas-build-completed-with-review-of-the-kit.8385/
