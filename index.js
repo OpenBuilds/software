@@ -83,15 +83,16 @@ function checkIfDriverIsInstalled() {
 
 $(document).ready(function() {
 
-  // // Check if Driver is running
-  // var DriverCheckinterval = setInterval(function() {
-  //   checkIfDriverIsInstalled();
-  // }, 1000);
+
+  var downloadCountInterval = setInterval(function() {
+    getTotalDownload();
+  }, 60000);
 
   noDriver();
-  getAvailableDriverVersion()
-  getCAMChangelog()
-  getCONTROLChangelog()
+  getAvailableDriverVersion();
+  getCAMChangelog();
+  getCONTROLChangelog();
+  getTotalDownload();
 });
 
 function hasDriver(version) {
@@ -166,6 +167,8 @@ function downloadDrivers(os) {
         window.location = url
         // }
       }
+
+
     }
     var oneHour = 60 * 60 * 1000;
     var oneDay = 24 * oneHour;
@@ -292,4 +295,64 @@ function versionCompare(v1, v2, options) {
   }
 
   return 0;
+}
+
+function showStats(data) {
+  var err = false;
+  var errMessage = '';
+
+  if (data.status == 404) {
+    err = true;
+    errMessage = "The project does not exist!";
+  }
+
+  if (data.status == 403) {
+    err = true;
+    errMessage = "You've exceeded GitHub's rate limiting.<br />Please try again in about an hour.";
+  }
+
+  if (data.length == 0) {
+    err = true;
+    errMessage = "There are no releases for this project";
+  }
+
+  var html = "";
+
+  if (err) {
+    console.log(errMessage)
+  } else {
+    var isLatestRelease = true;
+    var totalDownloadCount = 0;
+    $.each(data, function(index, item) {
+      var releaseTag = item.tag_name;
+      var releaseBadge = "";
+      var releaseClassNames = "release";
+      var releaseURL = item.html_url;
+      var isPreRelease = item.prerelease;
+      var releaseAssets = item.assets;
+      var releaseDownloadCount = 0;
+      var releaseAuthor = item.author;
+      var publishDate = item.published_at.split("T")[0];
+
+      if (releaseAssets.length) {
+        $.each(releaseAssets, function(index, asset) {
+          var assetSize = (asset.size / 1048576.0).toFixed(2);
+          var lastUpdate = asset.updated_at.split("T")[0];
+          totalDownloadCount += asset.download_count;
+          releaseDownloadCount += asset.download_count;
+        });
+      }
+    });
+
+    if (totalDownloadCount) {
+      console.log(totalDownloadCount)
+      $('#totalDownloadCount').html("<span class='tally bg-gray fg-white'>Did you know? OpenBuilds CONTROL has been downloaded " + totalDownloadCount + " times!</span>")
+    }
+
+  }
+}
+
+function getTotalDownload() {
+  var url = "https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases?client_id=fbbb80debc1197222169&client_secret=7dc6e463422e933448f9a3a4150c8d2bbdd0f87c";
+  $.getJSON(url, showStats).fail(showStats);
 }
