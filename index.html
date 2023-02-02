@@ -1,346 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <meta name="author" content="OpenBuilds">
-  <meta name="description" content="Download page for OpenBuilds Software / OpenBuilds CAM / OpenBuilds CONTROL">
-  <meta name="keywords" content="grbl, host, machine, drivers, openbuilds">
+    <meta name="author" content="OpenBuilds">
+    <meta name="description" content="Download page for OpenBuilds Software / OpenBuilds CAM / OpenBuilds CONTROL">
+    <meta name="keywords" content="grbl, host, machine, drivers, openbuilds">
 
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <link href="metro4/css/metro-all.css" rel="stylesheet">
-  <link href="index.css" rel="stylesheet">
+    <link href="metro4/css/metro-all.css" rel="stylesheet">
 
-  <title>OpenBuilds Software - FREE Software for CNC Control: OpenBuilds CONTROL and OpenBuilds CAM</title>
+    <meta name="metro4:init" content="true">
 
+    <link href="index.css" rel="stylesheet">
 
-  <style>
-    .login-form {
-      width: 90%;
-      height: 100%;
-    }
-
-    .bg-facebook {
-      background-color: #3b5998;
-    }
-
-    .bg-twitter {
-      background-color: #1da1f2;
-    }
-
-    .bg-tumblr {
-      background-color: #35465c;
-    }
-
-    .bg-pinterest {
-      background-color: #bd081c;
-    }
-
-    .bg-reddit {
-      background-color: #ff4500;
-    }
-
-    .bg-telegram {
-      background-color: #0088cc;
-    }
-
-    /* SM Buttons */
-
-    /* End SM Buttons */
-  </style>
-</head>
-
-<body class="bg-openbuilds">
-
-  <div class="window" style="height: 100vh;">
-    <div class="window-caption bg-openbuilds" style="-webkit-app-region: drag;">
-      <span class="icon "><img src="icon-transparent.png"/></span>
-      <span class="title" id="windowtitle">software.openbuilds.com - FREE Software brought to you by the world's largest  <a href="https://openbuilds.com" target="_new" class="fg-white"><i class="fas fa-user ani-vertical"></i> Maker Community: OpenBuilds.com - Join Today!</a> </span>.
-    </div>
-    <div class="window-content p-6" style="height: 100%; overflow: auto  !important;">
-
-      <div class="row">
-        <div class="cell-sm-full cell-md-full cell-lg-10">
-          <div class="row">
-            <div class="cell-sm-full cell-md-5 cell-lg-3 p-6">
-
-              <div class="border bd-gray drop-shadow" data-role="carousel" data-period="2000" data-effect="slide" data-effect-func="easeInQuart" data-auto-start="true" data-duration="200" data-height="4/3" data-control-next="<span class='mif-chevron-right fg-openbuilds'></span>"
-                data-control-prev="<span class='mif-chevron-left fg-openbuilds'></span>">
-                <div class="slide" data-cover="img/control/control1.png"></div>
-                <div class="slide" data-cover="img/control/control2.png"></div>
-                <div class="slide" data-cover="img/control/control3.png"></div>
-                <div class="slide" data-cover="img/control/control4.png"></div>
-                <div class="slide" data-cover="img/control/control5.png"></div>
-                <div class="slide" data-cover="img/control/control6.png"></div>
-              </div>
-
-              <center class="remark alert drop-shadow p-2">
-
-                <h6 class="fg-red m-0"><i class="fas fa-heart ani-heartbeat"></i> CONTROL?</h6><br> Share it with your friends! They'll love it too!<br>
-                <a class="button m-1 small bg-facebook fg-white" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
-                <a class="button m-1  small bg-twitter fg-white" href="https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                <a class="button m-1  small bg-tumblr fg-white" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=&amp;caption=&amp;content=https%3A%2F%2Fsoftware.openbuilds.com&amp;canonicalUrl=http%3A%2F%2Fsoftware.openbuilds.com&amp;shareSource=tumblr_share_button"
-                  target="_blank" rel="noopener" aria-label="Tumbler"><i class="fab fa-tumblr"></i> Tumblr</a>
-                <a class="button m-1  small bg-pinterest fg-white" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fsoftware.openbuilds.com&amp;media=http%3A%2F%2Fsoftware.openbuilds.com&amp;description=" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest"></i> Pinterest</a>
-                <a class="button m-1  small bg-reddit fg-white" href="https://reddit.com/submit/?url=https%3A%2F%2Fsoftware.openbuilds.com&amp;resubmit=true&amp;title=" target="_blank" rel="noopener" aria-label="Reddit"><i class="fab fa-reddit"></i> Reddit</a>
-                <a class="button m-1  small bg-telegram fg-white" href="https://telegram.me/share/url?text=&amp;url=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
+    <title>OpenBuilds Software: OpenBuilds CONTROL and OpenBuilds CAM</title>
 
 
-              </center>
+    <style>
+      .login-form {
+        width: 90%;
+        height: 100%;
+      }
 
-            </div>
-            <div class="cell-sm-full cell-md-7 cell-lg-9">
-              <table style="height: 100%; width: 100%;">
-                <tr>
-                  <td valign="top" style="vertical-align: top;">
-                    <h3 class="mb-0 fg-openbuilds">OpenBuilds CONTROL - Machine Interface Controller</h3>
-                    <p class="text-secondary mt-0 mb-1">OpenBuilds CONTROL is an application for connecting to, and controlling, your CNC, Laser, Plasma or Dragknife machine.</p>
-                    <nav data-role="ribbonmenu">
-                      <ul class="tabs-holder">
-                        <li><a href="#tab-win"><i class="fab fa-windows"></i> Windows</a></li>
-                        <li><a href="#tab-mac"><i class="fab fa-apple"></i> Mac</a></li>
-                        <li><a href="#tab-linux"><i class="fab fa-linux"></i> Linux</a></li>
-                      </ul>
+      .bg-facebook {
+        background-color: #3b5998;
+      }
 
-                      <div class="content-holder">
-                        <div class="section" id="tab-win">
-                          <div class="info-button bg-green fg-white bd-green">
-                            <a href="#" onclick="downloadDrivers('win')" class="button"><span class="fab fa-windows"></span> Download for Windows (EXE)</a>
-                            <a href="#" class="info omdavailversion">v1.0.0</a>
-                          </div><br>
-                        </div>
-                        <div class="section" id="tab-mac">
-                          <div class="info-button bg-green fg-white bd-green">
-                            <a href="#" onclick="downloadDrivers('mac')" class="button"><span class="fab fa-apple"></span> Download for MacOS (DMG)</a>
-                            <a href="#" class="info omdavailversion">v1.0.0</a>
-                          </div><br>
-                        </div>
-                        <div class="section" id="tab-linux">
-                          <div>
-                            <div class="info-button bg-green fg-white bd-green mr-2">
-                              <a href="#" onclick="downloadDrivers('deb')" class="button"><span class="fab fa-linux"></span> Linux (DEB)</a>
-                              <a href="#" class="info omdavailversion">v1.0.0</a>
-                            </div>
-                            <div class="info-button bg-green fg-white bd-green">
-                              <a href="#" onclick="downloadDrivers('appimage')" class="button"><span class="fab fa-linux"></span> Linux (AppImage)</a>
-                              <a href="#" class="info omdavailversion">v1.0.0</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div id="totalDownloadCount" class="p-2 text-small"></div>
-                      </div>
-                    </nav>
-                    <hr />
-                    <div data-role="accordion" data-show-active="true" data-one-frame="false">
-                      <div class="frame active">
-                        <div class="heading"><i class="far fa-fw fa-newspaper"></i> About</div>
-                        <div class="content">
-                          <p class="text-small">This will allow you to
-                            <ul>
-                              <li class="text-small">Interface with, and Jog your machine</li>
-                              <li class="text-small">Run GCODE Jobs</li>
-                              <li class="text-small">Set Zero coordinates</li>
-                              <li class="text-small">Integrate with <a href="https://cam.openbuilds.com" target="_new">cam.openbuilds.com</a></li>
-                              <li class="text-small">Flatten/Surface your spoilboard / stock</li>
-                              <li class="text-small">and even help with your Firmware configuration</li>
-                            </ul>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="frame">
-                        <div class="heading"><i class="fas fa-fw fa-hands-helping"></i> Support</div>
-                        <div class="content">
-                          <div class="text-secondary p-1">
-                            Have a question? <a href="https://openbuilds.com/threads/openbuilds-control-software.13121/" target="_new"><i class="far fa-comments"></i> OpenBuilds CONTROL support thread on OpenBuilds.com/Forums </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="frame">
-                        <div class="heading"><i class="fas fa-fw fa-history"></i> Changelog <span class="tally alert">See what's NEW in OpenBuilds CONTROL</span></div>
-                        <div class="content">
-                          <div id="controlchangelog" class="text-small"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
+      .bg-twitter {
+        background-color: #1da1f2;
+      }
+
+      .bg-tumblr {
+        background-color: #35465c;
+      }
+
+      .bg-pinterest {
+        background-color: #bd081c;
+      }
+
+      .bg-reddit {
+        background-color: #ff4500;
+      }
+
+      .bg-telegram {
+        background-color: #0088cc;
+      }
+
+      /* SM Buttons */
+
+      /* End SM Buttons */
+    </style>
+  </head>
+
+  <body class="bg-white">
+
+    <div class="container">
+
+      <div class="grid">
+
+        <div class="row bg-lightGray">
+          <div class="cell m-2">
+            <img height="100" src="openbuildslogo.png" />
           </div>
+        </div>
 
-          <hr class="thin mt-4 mb-4 pb-1 bg-openbuilds" />
-          <div class="row">
-            <div class="cell-sm-full cell-md-5 cell-lg-3">
-              <div class="border bd-gray drop-shadow" data-role="carousel" data-period="2000" data-effect="slide" data-effect-func="easeInQuart" data-auto-start="true" data-duration="200" data-height="4/3" data-control-next="<span class='mif-chevron-right fg-openbuilds'></span>"
-                data-control-prev="<span class='mif-chevron-left fg-openbuilds'></span>">
+        <div class="row bg-dark fg-light drop-shadow mb-4 pl-4">
+          <div class="cell m-2">
+            <span class="title" id="windowtitle">software.openbuilds.com - FREE Software brought to you by the world's largest <a href="https://openbuilds.com" target="_new" class="fg-white"> <i class="fas fa-user ani-vertical"></i> Maker Community:
+                OpenBuilds.com - Join Today!</a> </span>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="cell p-2 mb-5">
+            <center>
+              <h4>Checkout the following FREE software</h4>
+              <a class="shortcut" style="width: 30%;" href="#openbuilds-control">
+                <span class="caption">OpenBuilds CONTROL</span>
+                <span class="fas fa-download icon"></span>
+              </a>
+              <a class="shortcut" style="width: 30%;" href="#openbuilds-cam">
+                <span class="caption">OpenBuilds CAM</span>
+                <span class="fas fa-globe-americas icon"></span>
+              </a>
+            </center>
+
+          </div>
+        </div>
+
+        <div class="row bg-darkGray mb-5">
+          <div class="cell-5 p-1">
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="cell-5 p-2">
+            <div class="img-container drop-shadow">
+              <div class="border bd-gray drop-shadow" data-role="carousel" data-period="2000" data-effect="slide" data-effect-func="easeInQuart" data-auto-start="true" data-duration="200" data-height="4/3"
+                data-control-next="<span class='mif-chevron-right fg-white drop-shadow bd-light'></span>" data-control-prev="<span class='mif-chevron-left fg-white drop-shadow bd-light'></span>">
+                <div class="slide" data-cover="control1.png"></div>
+                <div class="slide" data-cover="control2.png"></div>
+                <div class="slide" data-cover="surface1.png"></div>
+                <div class="slide" data-cover="probe1.png"></div>
+                <div class="slide" data-cover="calibrate.png"></div>
+                <div class="slide" data-cover="grblsettings.png"></div>
+                <div class="slide" data-cover="gcodeeditor.png"></div>
+              </div>
+            </div>
+            <p />
+            <hr>
+            <p />
+            <div class="img-container drop-shadow">
+              <iframe width="100%" height="420" src="https://www.youtube.com/embed/kI-0n1tFO5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+
+            <center class="remark alert drop-shadow p-2">
+
+              <h6 class="fg-red m-0"><i class="fas fa-heart ani-heartbeat"></i> OpenBuilds CONTROL?</h6><br> Share it with your friends! They'll love it too!<br>
+              <a class="button m-1 small bg-facebook fg-white" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+              <a class="button m-1  small bg-twitter fg-white" href="https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+              <a class="button m-1  small bg-tumblr fg-white"
+                href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=&amp;caption=&amp;content=https%3A%2F%2Fsoftware.openbuilds.com&amp;canonicalUrl=http%3A%2F%2Fsoftware.openbuilds.com&amp;shareSource=tumblr_share_button"
+                target="_blank" rel="noopener" aria-label="Tumbler"><i class="fab fa-tumblr"></i> Tumblr</a>
+              <a class="button m-1  small bg-pinterest fg-white" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fsoftware.openbuilds.com&amp;media=http%3A%2F%2Fsoftware.openbuilds.com&amp;description=" target="_blank" rel="noopener"
+                aria-label="Pinterest"><i class="fab fa-pinterest"></i> Pinterest</a>
+              <a class="button m-1  small bg-reddit fg-white" href="https://reddit.com/submit/?url=https%3A%2F%2Fsoftware.openbuilds.com&amp;resubmit=true&amp;title=" target="_blank" rel="noopener" aria-label="Reddit"><i class="fab fa-reddit"></i>
+                Reddit</a>
+              <a class="button m-1  small bg-telegram fg-white" href="https://telegram.me/share/url?text=&amp;url=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i>
+                Telegram</a>
+
+
+            </center>
+
+          </div>
+          <div class="cell-7 p-2">
+
+
+            <h1 class="mb-0 fg-openbuilds display3" id="openbuilds-control">OpenBuilds CONTROL</h1>
+            <p class="text-secondary mt-0 mb-1">OpenBuilds CONTROL is an application for connecting to, and controlling, your CNC, Laser, Plasma or Dragknife machine.</p>
+            <hr>
+            <h1><i class="fas fa-download"></i> Free Download</h1>
+            <hr>
+            <nav data-role="ribbonmenu">
+              <ul class="tabs-holder">
+                <li class="text-bold"><a href="#tab-win"><i class="fab fa-windows"></i> Windows</a></li>
+                <li class="text-bold"><a href="#tab-mac"><i class="fab fa-apple"></i> Mac</a></li>
+                <li class="text-bold"><a href="#tab-linux"><i class="fab fa-linux"></i> Linux</a></li>
+              </ul>
+
+              <div class="content-holder">
+                <div class="section" id="tab-win">
+                  <div class="info-button bg-green fg-white bd-green">
+                    <a href="#" onclick="downloadDrivers('win')" class="button"><span class="fab fa-windows"></span> <b>Download</b> CONTROL for Windows (EXE)</a>
+                    <a href="#" class="info omdavailversion">v1.0.0</a>
+                  </div><br>
+                </div>
+                <div class="section" id="tab-mac">
+                  <div class="info-button bg-green fg-white bd-green">
+                    <a href="#" onclick="downloadDrivers('mac')" class="button"><span class="fab fa-apple"></span> <b>Download</b> CONTROL for MacOS (DMG)</a>
+                    <a href="#" class="info omdavailversion">v1.0.0</a>
+                  </div><br>
+                </div>
+                <div class="section" id="tab-linux">
+                  <div>
+                    <div class="info-button bg-green fg-white bd-green mr-2">
+                      <a href="#" onclick="downloadDrivers('deb')" class="button"><span class="fab fa-linux"></span> <b>Download</b> CONTROL for Linux (DEB)</a>
+                      <a href="#" class="info omdavailversion">v1.0.0</a>
+                    </div>
+                    <div class="info-button bg-green fg-white bd-green">
+                      <a href="#" onclick="downloadDrivers('appimage')" class="button"><span class="fab fa-linux"></span> <b>Download</b> CONTROL for Linux (AppImage)</a>
+                      <a href="#" class="info omdavailversion">v1.0.0</a>
+                    </div>
+                  </div>
+                </div>
+                <div id="totalDownloadCount" class="p-2 text-small"></div>
+              </div>
+            </nav>
+            <hr />
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>
+                    <i class="far fa-fw fa-newspaper"></i> About
+                  </th>
+                </tr>
+              </thead>
+
+              <tr>
+                <td>
+
+                  <p class="text-small">OpenBuilds CONTROL will allow you to
+                    <ul>
+                      <li class="text-small">Interface with, and Jog your machine</li>
+                      <li class="text-small">Run GCODE Jobs</li>
+                      <li class="text-small">Set Zero coordinates</li>
+                      <li class="text-small">Run Probing Operations</li>
+                      <li class="text-small">Integrate with <a href="https://cam.openbuilds.com" target="_new">cam.openbuilds.com</a></li>
+                      <li class="text-small">Flatten/Surface your spoilboard / stock</li>
+                      <li class="text-small">Calibrate your machine</li>
+                      <li class="text-small">Load Machine Profiles and customize Settings</li>
+                      <li class="text-small">Perform Firmware Updates</li>
+                      <li class="text-small">Design your own fully interactive Javascript Macro buttons</li>
+                    </ul>
+                  </p>
+                </td>
+              </tr>
+              <thead>
+                <tr>
+                  <th>
+                    <i class="fas fa-fw fa-hands-helping"></i> Support
+                  </th>
+                </tr>
+              </thead>
+              <tr>
+                <td>
+
+                  <ul>
+
+                    <li class="text-small">
+
+                      Documentation:<br>
+                      Check out the <a href="https://docs.openbuilds.com/doku.php?id=docs:software:overview" target="_new"><i class="fas fa-atlas"></i> OpenBuilds Software Documentation </a>
+
+                    </li>
+
+                    <hr class="hr">
+
+
+                    <li class="text-small">
+
+                      Have a question?<br>
+                      Check out the <a href="https://openbuilds.com/threads/openbuilds-control-software.13121/" target="_new"><i class="far fa-comments"></i> OpenBuilds CONTROL support thread on OpenBuilds.com/Forums </a>
+
+                    </li>
+
+                  </ul>
+
+
+
+
+                </td>
+              </tr>
+
+              <thead>
+                <tr>
+                  <th>
+                    <i class="fas fa-fw fa-history"></i> Changelog
+                  </th>
+                </tr>
+              </thead>
+              <tr>
+                <td>
+
+                  <div id="controlchangelog" class="text-small"></div>
+
+                </td>
+              </tr>
+
+            </table>
+
+          </div>
+        </div>
+
+
+        <div class="row bg-darkGray mb-5">
+          <div class="cell-5 p-1">
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="cell-5 p-2">
+            <div class="img-container drop-shadow">
+              <div class="border bd-gray drop-shadow" data-role="carousel" data-period="2000" data-effect="slide" data-effect-func="easeInQuart" data-auto-start="true" data-duration="200" data-height="4/3"
+                data-control-next="<span class='mif-chevron-right fg-white drop-shadow bd-light'></span>" data-control-prev="<span class='mif-chevron-left fg-white drop-shadow bd-light'></span>">
                 <div class="slide" data-cover="img/cam/cam1.png"></div>
                 <div class="slide" data-cover="img/cam/cam2.png"></div>
                 <div class="slide" data-cover="img/cam/cam3.png"></div>
                 <div class="slide" data-cover="img/cam/cam4.png"></div>
                 <div class="slide" data-cover="img/cam/cam5.png"></div>
               </div>
-
-              <center class="remark alert drop-shadow p-2">
-
-                <h6 class="fg-red m-0"><i class="fas fa-heart ani-heartbeat"></i> CAM?</h6><br> Share it with your friends! They'll love it too!<br>
-                <a class="button m-1 small bg-facebook fg-white" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
-                <a class="button m-1  small bg-twitter fg-white" href="https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                <a class="button m-1  small bg-tumblr fg-white" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=&amp;caption=&amp;content=https%3A%2F%2Fsoftware.openbuilds.com&amp;canonicalUrl=http%3A%2F%2Fsoftware.openbuilds.com&amp;shareSource=tumblr_share_button"
-                  target="_blank" rel="noopener" aria-label="Tumbler"><i class="fab fa-tumblr"></i> Tumblr</a>
-                <a class="button m-1  small bg-pinterest fg-white" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fsoftware.openbuilds.com&amp;media=http%3A%2F%2Fsoftware.openbuilds.com&amp;description=" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest"></i> Pinterest</a>
-                <a class="button m-1  small bg-reddit fg-white" href="https://reddit.com/submit/?url=https%3A%2F%2Fsoftware.openbuilds.com&amp;resubmit=true&amp;title=" target="_blank" rel="noopener" aria-label="Reddit"><i class="fab fa-reddit"></i> Reddit</a>
-                <a class="button m-1  small bg-telegram fg-white" href="https://telegram.me/share/url?text=&amp;url=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
-
-
-              </center>
-
             </div>
-            <div class="cell-sm-full cell-md-7 cell-lg-9">
-              <table style="height: 100%; width: 100%;">
+            <center class="remark alert drop-shadow p-2">
+
+              <h6 class="fg-red m-0"><i class="fas fa-heart ani-heartbeat"></i> OpenBuilds CAM?</h6><br> Share it with your friends! They'll love it too!<br>
+              <a class="button m-1 small bg-facebook fg-white" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+              <a class="button m-1  small bg-twitter fg-white" href="https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+              <a class="button m-1  small bg-tumblr fg-white"
+                href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=&amp;caption=&amp;content=https%3A%2F%2Fsoftware.openbuilds.com&amp;canonicalUrl=http%3A%2F%2Fsoftware.openbuilds.com&amp;shareSource=tumblr_share_button"
+                target="_blank" rel="noopener" aria-label="Tumbler"><i class="fab fa-tumblr"></i> Tumblr</a>
+              <a class="button m-1  small bg-pinterest fg-white" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fsoftware.openbuilds.com&amp;media=http%3A%2F%2Fsoftware.openbuilds.com&amp;description=" target="_blank" rel="noopener"
+                aria-label="Pinterest"><i class="fab fa-pinterest"></i> Pinterest</a>
+              <a class="button m-1  small bg-reddit fg-white" href="https://reddit.com/submit/?url=https%3A%2F%2Fsoftware.openbuilds.com&amp;resubmit=true&amp;title=" target="_blank" rel="noopener" aria-label="Reddit"><i class="fab fa-reddit"></i>
+                Reddit</a>
+              <a class="button m-1  small bg-telegram fg-white" href="https://telegram.me/share/url?text=&amp;url=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i>
+                Telegram</a>
+
+
+            </center>
+
+          </div>
+          <div class="cell-7 p-2">
+
+
+            <h1 class="mb-0 fg-openbuilds display3" id="openbuilds-cam">OpenBuilds CAM</h1>
+            <p class="text-secondary mt-0 mb-1">OpenBuilds CAM is a web-based application for converting SVG, DXF and Bitmap drawings, to GCODE for use with your CNC, Laser, Plasma or Dragknife Machine</p>
+            <hr>
+            <h1><i class="fas fa-download"></i> Free Online Software</h1>
+            <hr>
+            <div class="info-button bg-green fg-white bd-green">
+              <a href="https://cam.openbuilds.com" target="_new" class="button"><span class="fas fa-link"></span> Browse to</a>
+              <a href="https://cam.openbuilds.com" target="_new" class="info">https://cam.openbuilds.com</a>
+            </div>
+            <hr />
+
+            <table class="table">
+              <thead>
                 <tr>
-                  <td valign="top" style="vertical-align: top;">
-                    <h3 class="mb-0 fg-openbuilds">OpenBuilds CAM - GCODE Generator</h3>
-                    <p class="text-secondary mt-0 mb-1">OpenBuilds CAM is a web-based application for converting SVG, DXF and Bitmap drawings, to GCODE for use with your CNC, Laser, Plasma or Dragknife Machine</p>
-                    <div class="info-button bg-green fg-white bd-green">
-                      <a href="https://cam.openbuilds.com" target="_new" class="button"><span class="fas fa-link"></span> Browse to</a>
-                      <a href="https://cam.openbuilds.com" target="_new" class="info">https://cam.openbuilds.com</a>
-                    </div>
-                    <hr />
-                    <div data-role="accordion" data-show-active="true" data-one-frame="false">
-                      <div class="frame active">
-                        <div class="heading"><i class="far fa-fw fa-newspaper"></i> About</div>
-                        <div class="content">
-                          <p class="text-small">This will allow you to
-                            <ul>
-                              <li class="text-small">Import DXF/SVG/PNG/BMP/JPG/Gerber/Excellon files</li>
-                              <li class="text-small">Import from a built-in Parts Library</li>
-                              <li class="text-small">Setup toolpaths for CNC Routing, Laser cutting, Plasma Cutting and Dragknives</li>
-                              <li class="text-small">Generate GCODE</li>
-                              <li class="text-small">Send GCODE to OpenBuilds CONTROL</li>
-                            </ul>
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="frame">
-                        <div class="heading"><i class="fas fa-fw fa-hands-helping"></i> Support</div>
-                        <div class="content">
-                          <div class="text-secondary p-1">
-                            Have a question? <a href="https://openbuilds.com/threads/openbuilds-cam-software.13122/" target="_new"><i class="far fa-comments"></i> OpenBuilds CAM support thread on OpenBuilds.com/Forums </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="frame">
-                        <div class="heading"><i class="fas fa-fw fa-history"></i> Changelog
-                          <span class="tally alert">See what's NEW in OpenBuilds CAM</span>
-                        </div>
-                        <div class="content">
-                          <div id="camchangelog" class="text-small"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
+                  <th>
+                    <i class="far fa-fw fa-newspaper"></i> About
+                  </th>
                 </tr>
-              </table>
-            </div>
+              </thead>
+
+              <tr>
+                <td>
+
+                  <p class="text-small">OpenBuilds CAM will allow you to
+                    <ul>
+                      <li class="text-small">Import DXF/SVG/PNG/BMP/JPG/Gerber/Excellon files</li>
+                      <li class="text-small">Import from a built-in Parts Library</li>
+                      <li class="text-small">Setup toolpaths for CNC Routing, Laser cutting, Plasma Cutting and Dragknives</li>
+                      <li class="text-small">Generate GCODE</li>
+                      <li class="text-small">Send GCODE to OpenBuilds CONTROL</li>
+                    </ul>
+                  </p>
+                </td>
+              </tr>
+              <thead>
+                <tr>
+                  <th>
+                    <i class="fas fa-fw fa-hands-helping"></i> Support
+                  </th>
+                </tr>
+              </thead>
+              <tr>
+                <td>
+
+                  <ul>
+
+                    <li class="text-small">
+
+                      Documentation:<br>
+                      Check out the <a href="https://docs.openbuilds.com/doku.php?id=docs:software:overview" target="_new"><i class="fas fa-atlas"></i> OpenBuilds Software Documentation </a>
+
+                    </li>
+
+                    <hr class="hr">
+
+
+                    <li class="text-small">
+
+                      Have a question?<br>
+                      Have a question? <a href="https://openbuilds.com/threads/openbuilds-cam-software.13122/" target="_new"><i class="far fa-comments"></i> OpenBuilds CAM support thread on OpenBuilds.com/Forums </a>
+
+
+                    </li>
+
+                  </ul>
+
+
+
+
+                </td>
+              </tr>
+
+              <thead>
+                <tr>
+                  <th>
+                    <i class="fas fa-fw fa-history"></i> Changelog
+                  </th>
+                </tr>
+              </thead>
+              <tr>
+                <td>
+
+                  <div id="camchangelog" class="text-small"></div>
+
+                </td>
+              </tr>
+
+            </table>
+
           </div>
         </div>
-        <div class="cell-sm-none cell-md-none cell-lg-2">
-          <center>
-            <h4><i class="far fa-comments"></i> Reviews</h4></center>
 
-          <blockquote>
-            <p class="text-small"><em>"Great, thanks for all your work on this software. It gets better with every update."</em></p>
-            <small>
-            <cite><a href="https://openbuilds.com/threads/openbuilds-control-software.13121/page-21#post-82859" class="fg-grayBlue">WJC</a></cite>
-            </small>
-          </blockquote>
+      </div><!--  end grid cam -->
 
-
-          <blockquote>
-            <p class="text-small"><em>"The software to run this thing is EXCELLENT. I work at a large company that produces software and this was very, very professionally done. The drivers for the USB connection, the Control software for the machine, and the web-based CAM software
-              all worked together first shot. Very, very well done. I'm already seeing where I want to venture off into Fusion 360 soon for my CAM work, but this is a great jumping off point."</em></p>
-            <small>
-       <cite><a href="https://openbuilds.com/builds/lead-cnc-build-mansfield-texas-build-completed-with-review-of-the-kit.8385/" class="fg-grayBlue">RoosterTX</a></cite>
-    </small>
-          </blockquote>
-          <hr class="thin bg-light" />
-          <blockquote>
-            <p class="text-small"><em>"its very intuitive and was super simple to setup"</em></p>
-            <small>
-         <cite><a href="https://openbuilds.com/threads/openbuilds-control-software.13121/#post-72759" class="fg-grayBlue">Sharmstr</a></cite>
-    </small>
-          </blockquote>
-          <hr class="thin bg-light" />
-          <blockquote>
-            <p class="text-small"><em>"I just tried it and It works awesome. Thanks."</em></p>
-            <small>
-       <cite><a href="https://openbuilds.com/threads/openbuilds-control-software.13121/page-3#post-74947" class="fg-grayBlue">ClaudeJER</a></cite>
-    </small>
-          </blockquote>
-          <hr class="thin bg-light" />
-          <blockquote>
-            <p class="text-small"><em>"Great little piece of software"</em></p>
-            <small>
-       <cite><a href="https://openbuilds.com/threads/openbuilds-control-software.13121/page-3#post-75158" class="fg-grayBlue">Bernie Clark</a></cite>
-    </small>
-          </blockquote>
-          <hr class="thin bg-light" />
-          <blockquote>
-            <p class="text-small"><em>"[The new] 'Fine Tune' feature for the steps/mm in the Grbl settings [...] I just used that and I really appreciate the step-by-step walkthrough for tuning those numbers - very cool! A whole lot easier and quicker than measuring the distances
-              on the wasteboard. Big thanks to everyone working on this great software for continuing to improve things, it's now fitting seamlessly into my workflow and is one less thing that I have to worry about"</em></p>
-            <small>
-       <cite><a href="https://openbuilds.com/threads/openbuilds-control-software.13121/page-4#post-75465" class="fg-grayBlue">Michiglenn</a></cite>
-    </small>
-          </blockquote>
-          <hr class="thin bg-light" />
-          <blockquote>
-            <p class="text-small"><em>"it works perfectly"</em></p>
-            <small>
-       <cite><a href="https://openbuilds.com/threads/openbuilds-control-software.13121/page-4#post-75541" class="fg-grayBlue">Shelby Teknologies</a></cite>
-    </small>
-          </blockquote>
-          <hr class="thin bg-light" />
-          <blockquote>
-            <p class="text-small"><em>"I LOVE the OpenBuilds CONTROL app and the GCODE Generator. I want to have your babies now! And I'm a guy..."</em></p>
-            <small>
-       <cite><a href="https://openbuilds.com/threads/openbuilds-control-software.13121/page-5#post-75751" class="fg-grayBlue">Jet Jaguar</a></cite>
-    </small>
-          </blockquote>
-          <hr class="thin bg-light" />
-          <blockquote>
-            <p class="text-small"><em>"Love this software, loaded and ran without a hitch. Z probe is great, dont have to go anywhere else, and the macro’s. Poor mans tool changer. [...] Thanks for the software, Im really enjoing it."</em></p>
-            <small>
-       <cite><a href="https://openbuilds.com/threads/things-you-didnt-know-about-openbuilds-software.13575/#post-76219" class="fg-grayBlue">Steveathome</a></cite>
-    </small>
-          </blockquote>
-          <hr class="thin bg-light" />
-          <blockquote>
-            <p class="text-small"><em>"[The Fine Tuning Wizard ] ... That makes things super easy."</em></p>
-            <small>
-       <cite><a href="https://openbuilds.com/threads/openbuilds-lead-cnc.13307/page-11#post-77372" class="fg-grayBlue">Dmhaes</a></cite>
-    </small>
-          </blockquote>
+      <div class="row bg-darkGray mb-5">
+        <div class="cell-5 p-1">
         </div>
       </div>
 
-    </div>
 
-
-
-
-
+    </div><!--  end container -->
 
     <script type="text/javascript" src="fontawesome5/js/all.js"></script>
     <script src="jquery.min.js"></script>
     <script src="metro4/js/metro.js"></script>
     <script src="index.js"></script>
 
-</body>
+  </body>
 
 
 </html>

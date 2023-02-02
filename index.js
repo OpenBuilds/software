@@ -62,7 +62,7 @@ function checkIfDriverIsInstalled() {
         setTimeout(function() {
           // console.log('checking for update')
           // printLog("<span class='fg-green'>Checking for Updates</span>")
-          $.getJSON("https://api.github.com/repos/OpenBuilds/SW-Machine-Drivers/releases/latest?client_id=fbbb80debc1197222169&client_secret=7dc6e463422e933448f9a3a4150c8d2bbdd0f87c").done(function(release) {
+          $.getJSON("https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases/latest").done(function(release) {
             var availVersion = release.name.substr(1)
             var currentVersion = instance.version
             // hasDriver(instance.version)
@@ -141,7 +141,7 @@ setInterval(function() {
 }, 1000);
 
 function downloadDrivers(os) {
-  $.getJSON("https://api.github.com/repos/OpenBuilds/SW-Machine-Drivers/releases/latest?client_id=fbbb80debc1197222169&client_secret=7dc6e463422e933448f9a3a4150c8d2bbdd0f87c").done(function(release) {
+  $.getJSON("https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases/latest").done(function(release) {
     console.log(release)
     var asset = release.assets[0];
     var downloadCount = 0;
@@ -186,7 +186,7 @@ function downloadDrivers(os) {
 }
 
 function getAvailableDriverVersion() {
-  $.getJSON("https://api.github.com/repos/OpenBuilds/SW-Machine-Drivers/releases/latest?client_id=fbbb80debc1197222169&client_secret=7dc6e463422e933448f9a3a4150c8d2bbdd0f87c").done(function(release) {
+  $.getJSON("https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases/latest").done(function(release) {
     $('.omdavailversion').html(release.name)
     availableDriverVersion = release.name
   });
@@ -346,13 +346,13 @@ function showStats(data) {
 
     if (totalDownloadCount) {
       console.log(totalDownloadCount)
-      $('#totalDownloadCount').html("<span class='tally bg-gray fg-white'>Did you know? OpenBuilds CONTROL has been downloaded " + totalDownloadCount + " times!</span>")
+      $('#totalDownloadCount').html("<span class='tally bg-darkGray fg-white'>Did you know? OpenBuilds CONTROL has been downloaded " + totalDownloadCount + " times!</span>")
     }
 
   }
 }
 
 function getTotalDownload() {
-  var url = "https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases?client_id=fbbb80debc1197222169&client_secret=7dc6e463422e933448f9a3a4150c8d2bbdd0f87c";
+  var url = "https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases";
   $.getJSON(url, showStats).fail(showStats);
 }
