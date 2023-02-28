@@ -140,8 +140,8 @@ setInterval(function() {
   // }
 }, 1000);
 
-function downloadDrivers(os) {
-  $.getJSON("https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases/latest").done(function(release) {
+function downloadDrivers(os, version) {
+  $.getJSON("https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases/" + version).done(function(release) {
     console.log(release)
     var asset = release.assets[0];
     var downloadCount = 0;
@@ -188,6 +188,9 @@ function downloadDrivers(os) {
 function getAvailableDriverVersion() {
   $.getJSON("https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases/latest").done(function(release) {
     $('.omdavailversion').html(release.name)
+    // Temporary while Bug in newer version
+    $('.omdavailversionmac').html("v1.0.348")
+    $('.omdavailversionlinux').html("v1.0.348")
     availableDriverVersion = release.name
   });
 }
