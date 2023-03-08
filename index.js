@@ -188,9 +188,6 @@ function downloadDrivers(os, version) {
 function getAvailableDriverVersion() {
   $.getJSON("https://api.github.com/repos/OpenBuilds/OpenBuilds-CONTROL/releases/latest").done(function(release) {
     $('.omdavailversion').html(release.name)
-    // Temporary while Bug in newer version
-    $('.omdavailversionmac').html("v1.0.348")
-    $('.omdavailversionlinux').html("v1.0.348")
     availableDriverVersion = release.name
   });
 }
