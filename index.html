@@ -18,7 +18,7 @@
 
     <link href="index.css" rel="stylesheet">
 
-    <title>OpenBuilds Software: OpenBuilds CONTROL and OpenBuilds CAM</title>
+    <title>OpenBuilds Software: OpenBuilds CONTROL and OpenBuilds CAM - FREE software to run your CNC, Laser, Plasma or Pen Plotter</title>
 
 
     <style>
@@ -151,7 +151,7 @@
             <hr>
             <nav data-role="ribbonmenu">
               <ul class="tabs-holder">
-                <li class="text-bold"><a href="#tab-win"><i class="fab fa-windows"></i> Windows 10/11</a></li>
+                <li class="text-bold"><a href="#tab-win"><i class="fab fa-windows"></i> Windows 10/11 (x64)</a></li>
                 <li class="text-bold"><a href="#tab-mac"><i class="fab fa-apple"></i> Mac</a></li>
                 <li class="text-bold"><a href="#tab-linux"><i class="fab fa-linux"></i> Linux</a></li>
               </ul>
@@ -164,10 +164,18 @@
                   </div><br>
                 </div>
                 <div class="section" id="tab-mac">
-                  <div class="info-button bg-green fg-white bd-green">
-                    <a href="#" onclick="downloadDrivers('mac', 'latest')" class="button"><span class="fab fa-apple"></span> <b>Download</b> CONTROL for MacOS (DMG)</a>
-                    <a href="#" class="info omdavailversion omdavailversionmac">v1.0.348</a>
-                  </div><br>
+                  <div>
+                    <div class="info-button bg-green fg-white bd-green">
+                      <a href="#" onclick="downloadDrivers('macx64', 'latest')" class="button"><span class="fab fa-apple"></span> <b>Download</b> CONTROL for MacOS on Intel x64 (DMG)</a>
+                      <a href="#" class="info omdavailversion omdavailversionmac">v1.0.348</a>
+                    </div>
+                    <p />
+                    <div class="info-button bg-green fg-white bd-green">
+                      <a href="#" onclick="downloadDrivers('macarm64', 'latest')" class="button"><span class="fab fa-apple"></span> <b>Download</b> CONTROL for MacOS on Apple Silicon arm64 (DMG)</a>
+                      <a href="#" class="info omdavailversion omdavailversionmac">v1.0.348</a>
+                    </div>
+                  </div>
+                  <br>
                 </div>
                 <div class="section" id="tab-linux">
                   <div>
@@ -175,6 +183,7 @@
                       <a href="#" onclick="downloadDrivers('deb', 'latest')" class="button"><span class="fab fa-linux"></span> <b>Download</b> CONTROL for Linux (DEB)</a>
                       <a href="#" class="info omdavailversion omdavailversionlinux">v1.0.348</a>
                     </div>
+                    <p />
                     <div class="info-button bg-green fg-white bd-green">
                       <a href="#" onclick="downloadDrivers('appimage', 'latest')" class="button"><span class="fab fa-linux"></span> <b>Download</b> CONTROL for Linux (AppImage)</a>
                       <a href="#" class="info omdavailversion omdavailversionlinux">v1.0.348</a>

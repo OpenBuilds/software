@@ -102,7 +102,6 @@ function hasDriver(version) {
   }
   $("#DriverDetected").fadeIn("slow");
   alreadyDetected = true;
-  $('#installDriversOnSettingspage').hide();
   $('#detectedVersion').html("<i class='fas fa-check fa-fw fg-green'></i>1. Detected OpenBuilds Machine Driver: " + version)
 }
 
@@ -111,7 +110,6 @@ function noDriver() {
   installedDriver = 'not detected'
   $("#DriverDetected").fadeOut("slow");
   $("#noDriverDetected").fadeIn("slow");
-  $('#installDriversOnSettingspage').show();
   $('#detectedVersion').html("<i class='fas fa-times fa-fw fg-red'></i>1. Not detecting the OpenBuilds Machine Driver")
   $('#installDriverMessage').html('Connecting to a machine, requires that you have the OpenBuilds Machine Driver installed.')
 }
@@ -121,7 +119,6 @@ function oldDriver(version, availVersion) {
   installedDriver = version
   $("#DriverDetected").fadeOut("slow");
   $("#noDriverDetected").fadeIn("slow");
-  $('#installDriversOnSettingspage').show();
   $('#detectedVersion').html("<i class='fas fa-times fa-fw fg-red'></i>1. You are running an outdated version of the OpenBuilds Machine Driver v." + version + ". Please update to v" + availVersion)
   $('#installDriverMessage').html('Connecting to a machine, requires that you have the latest OpenBuilds Machine Driver installed. <br>You are running version <code>' + version + "</code> - Please update to version <code>" + availVersion + "</code> or newer...")
   $('#installDriverHelp').hide();
@@ -146,18 +143,24 @@ function downloadDrivers(os, version) {
     var asset = release.assets[0];
     var downloadCount = 0;
     var url = ""
+    var assets = []
     for (var i = 0; i < release.assets.length; i++) {
       var asset = release.assets[i]
+      assets.push(asset);
+
 
       if (os == "win") {
-        var rex = ".exe$"
-      } else if (os == "mac") {
-        var rex = ".dmg$"
+        var rex = ".exe$";
+      } else if (os == "macx64") {
+        var rex = ".dmg$";
+      } else if (os == "macarm64") {
+        var rex = "arm64.*\\.dmg$"; // Match .dmg files containing arm64 in the filename
       } else if (os == "appimage") {
-        var rex = ".AppImage"
-      } else if (os == "deb$") {
-        var rex = ".deb$"
+        var rex = ".AppImage";
+      } else if (os == "deb") {
+        var rex = ".deb$";
       }
+
 
       console.log("Checking if we can find a " + rex + " in the assets")
       if (asset.browser_download_url.match(rex)) {
@@ -170,6 +173,7 @@ function downloadDrivers(os, version) {
 
 
     }
+    console.log(JSON.stringify(assets), null, 4);
     var oneHour = 60 * 60 * 1000;
     var oneDay = 24 * oneHour;
     var dateDiff = new Date() - new Date(asset.updated_at);
