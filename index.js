@@ -3,42 +3,6 @@ var alreadyDetected = false;
 var availableDriverVersion = 'v0.0.0'
 var installedDriver = 'not detected'
 
-function getCAMChangelog() {
-  $("#changelog").empty()
-  var template2 = `<ul>`
-  $.get("https://raw.githubusercontent.com/openbuilds/cam/master/CHANGELOG.txt?date=" + new Date().getTime(), function(data) {
-    var lines = data.split('\n');
-    if (lines.length < 15) {
-      var count = lines.length - 1
-    } else {
-      var count = 15
-    }
-    for (var line = 0; line < count; line++) {
-      template2 += '<li>' + lines[line] + '</li>'
-    }
-    template2 += `</ul>`
-    $("#camchangelog").html(template2);
-  });
-}
-
-function getCONTROLChangelog() {
-  $("#changelog").empty()
-  var template2 = `<ul>`
-  $.get("https://raw.githubusercontent.com/OpenBuilds/SW-Machine-Drivers/master/CHANGELOG.txt?date=" + new Date().getTime(), function(data) {
-    var lines = data.split('\n');
-    if (lines.length < 15) {
-      var count = lines.length - 1
-    } else {
-      var count = 15
-    }
-    for (var line = 0; line < count; line++) {
-      template2 += '<li>' + lines[line] + '</li>'
-    }
-    template2 += `</ul>`
-    $("#controlchangelog").html(template2);
-  });
-}
-
 function checkIfDriverIsInstalled() {
   // if (!alreadyDetected) {
   var url = "https://mymachine.openbuilds.com:3001/api/version"
@@ -90,8 +54,6 @@ $(document).ready(function() {
 
   noDriver();
   getAvailableDriverVersion();
-  getCAMChangelog();
-  getCONTROLChangelog();
   getTotalDownload();
 });
 
@@ -350,7 +312,7 @@ function showStats(data) {
 
     if (totalDownloadCount) {
       console.log(totalDownloadCount)
-      $('#totalDownloadCount').html("<span class='tally bg-darkGray fg-white'>Did you know? OpenBuilds CONTROL has been downloaded " + totalDownloadCount + " times!</span>")
+      $('#totalDownloadCount').html("<span class='tally bg-black fg-white'>OpenBuilds CONTROL has been downloaded " + totalDownloadCount + " times!</span>")
     }
 
   }

@@ -51,6 +51,22 @@
         background-color: #0088cc;
       }
 
+      .bg-obred {
+        background-color: #ff0000;
+      }
+
+      .bd-obred {
+        border-color: #ff0000;
+      }
+
+      .fg-obred {
+        color: #ff0000;
+      }
+
+      a {
+        color: #ff0000;
+      }
+
       /* SM Buttons */
 
       /* End SM Buttons */
@@ -59,49 +75,25 @@
 
   <body class="bg-white">
 
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="grid">
 
-        <div class="row bg-lightGray">
-          <div class="cell m-2">
-            <img height="100" src="openbuildslogo.png" />
+        <div class="row bg-black">
+          <div class=" cell m-2">
+            <img height="100" src="OpenBuildsSoftware.svg" />
           </div>
         </div>
 
-        <div class="row bg-dark fg-light drop-shadow mb-4 pl-4">
-          <div class="cell m-2">
-            <span class="title" id="windowtitle">software.openbuilds.com - FREE Software brought to you by the world's largest <a href="https://openbuilds.com" target="_new" class="fg-white"> <i class="fas fa-user ani-vertical"></i> Maker Community:
-                OpenBuilds.com - Join Today!</a> </span>
 
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="cell p-2 mb-5">
-            <center>
-              <h4>Checkout the following FREE software</h4>
-              <a class="shortcut" style="width: 30%;" href="#openbuilds-control">
-                <span class="caption">OpenBuilds CONTROL</span>
-                <span class="fas fa-download icon"></span>
-              </a>
-              <a class="shortcut" style="width: 30%;" href="#openbuilds-cam">
-                <span class="caption">OpenBuilds CAM</span>
-                <span class="fas fa-globe-americas icon"></span>
-              </a>
-            </center>
-
-          </div>
-        </div>
-
-        <div class="row bg-darkGray mb-5">
+        <div class="row bg-black mb-5">
           <div class="cell-5 p-1">
           </div>
         </div>
 
 
         <div class="row">
-          <div class="cell-5 p-2">
+          <div class="cell-3 p-2">
             <div class="img-container drop-shadow">
               <div class="border bd-gray drop-shadow" data-role="carousel" data-period="2000" data-effect="slide" data-effect-func="easeInQuart" data-auto-start="true" data-duration="200" data-height="4/3"
                 data-control-next="<span class='mif-chevron-right fg-white drop-shadow bd-light'></span>" data-control-prev="<span class='mif-chevron-left fg-white drop-shadow bd-light'></span>">
@@ -124,7 +116,7 @@
 
             <center class="remark alert drop-shadow p-2">
 
-              <h6 class="fg-red m-0"><i class="fas fa-heart ani-heartbeat"></i> OpenBuilds CONTROL?</h6><br> Share it with your friends! They'll love it too!<br>
+              <h6 class="fg-obred m-0"><i class="fas fa-heart ani-heartbeat"></i> OpenBuilds CONTROL?</h6><br> Share it with your friends! They'll love it too!<br>
               <a class="button m-1 small bg-facebook fg-white" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
               <a class="button m-1  small bg-twitter fg-white" href="https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
               <a class="button m-1  small bg-tumblr fg-white"
@@ -141,7 +133,7 @@
             </center>
 
           </div>
-          <div class="cell-7 p-2">
+          <div class="cell-9 p-2">
 
 
             <h1 class="mb-0 fg-openbuilds display3" id="openbuilds-control">OpenBuilds CONTROL</h1>
@@ -158,20 +150,20 @@
 
               <div class="content-holder">
                 <div class="section" id="tab-win">
-                  <div class="info-button bg-green fg-white bd-green">
-                    <a href="#" onclick="downloadDrivers('win', 'latest')" class="button"><span class="fab fa-windows"></span> <b>Download</b> CONTROL for Windows 10/11 (EXE)</a>
+                  <div class="info-button bg-obred fg-white bd-obred">
+                    <a href="#" onclick="downloadDrivers('win', 'latest')" class="button"><span class="fab fa-windows"></span> <b>Download</b> CONTROL for Windows 10/11 (x86/64 EXE)</a>
                     <a href="#" class="info omdavailversion">v1.0.0</a>
                   </div><br>
                 </div>
                 <div class="section" id="tab-mac">
                   <div>
-                    <div class="info-button bg-green fg-white bd-green">
-                      <a href="#" onclick="downloadDrivers('macx64', 'latest')" class="button"><span class="fab fa-apple"></span> <b>Download</b> CONTROL for MacOS on Intel x64 (DMG)</a>
+                    <div class="info-button bg-obred fg-white bd-obred">
+                      <a href="#" onclick="downloadDrivers('macx64', 'latest')" class="button"><span class="fab fa-apple"></span> <b>Download</b> CONTROL for MacOS on Intel (x64 DMG)</a>
                       <a href="#" class="info omdavailversion omdavailversionmac">v1.0.348</a>
                     </div>
                     <p />
-                    <div class="info-button bg-green fg-white bd-green">
-                      <a href="#" onclick="downloadDrivers('macarm64', 'latest')" class="button"><span class="fab fa-apple"></span> <b>Download</b> CONTROL for MacOS on Apple Silicon arm64 (DMG)</a>
+                    <div class="info-button bg-obred fg-white bd-obred">
+                      <a href="#" onclick="downloadDrivers('macarm64', 'latest')" class="button"><span class="fab fa-apple"></span> <b>Download</b> CONTROL for MacOS on Aple Silicon (arm64 DMG)</a>
                       <a href="#" class="info omdavailversion omdavailversionmac">v1.0.348</a>
                     </div>
                   </div>
@@ -179,12 +171,12 @@
                 </div>
                 <div class="section" id="tab-linux">
                   <div>
-                    <div class="info-button bg-green fg-white bd-green mr-2">
+                    <div class="info-button bg-obred fg-white bd-obred mr-2">
                       <a href="#" onclick="downloadDrivers('deb', 'latest')" class="button"><span class="fab fa-linux"></span> <b>Download</b> CONTROL for Linux (DEB)</a>
                       <a href="#" class="info omdavailversion omdavailversionlinux">v1.0.348</a>
                     </div>
                     <p />
-                    <div class="info-button bg-green fg-white bd-green">
+                    <div class="info-button bg-obred fg-white bd-obred">
                       <a href="#" onclick="downloadDrivers('appimage', 'latest')" class="button"><span class="fab fa-linux"></span> <b>Download</b> CONTROL for Linux (AppImage)</a>
                       <a href="#" class="info omdavailversion omdavailversionlinux">v1.0.348</a>
                     </div>
@@ -260,28 +252,13 @@
                 </td>
               </tr>
 
-              <thead>
-                <tr>
-                  <th>
-                    <i class="fas fa-fw fa-history"></i> Changelog
-                  </th>
-                </tr>
-              </thead>
-              <tr>
-                <td>
-
-                  <div id="controlchangelog" class="text-small"></div>
-
-                </td>
-              </tr>
-
             </table>
 
           </div>
         </div>
 
 
-        <div class="row bg-darkGray mb-5">
+        <div class="row bg-black mb-5">
           <div class="cell-5 p-1">
           </div>
         </div>
@@ -289,7 +266,7 @@
 
 
         <div class="row">
-          <div class="cell-5 p-2">
+          <div class="cell-3 p-2">
             <div class="img-container drop-shadow">
               <div class="border bd-gray drop-shadow" data-role="carousel" data-period="2000" data-effect="slide" data-effect-func="easeInQuart" data-auto-start="true" data-duration="200" data-height="4/3"
                 data-control-next="<span class='mif-chevron-right fg-white drop-shadow bd-light'></span>" data-control-prev="<span class='mif-chevron-left fg-white drop-shadow bd-light'></span>">
@@ -302,7 +279,7 @@
             </div>
             <center class="remark alert drop-shadow p-2">
 
-              <h6 class="fg-red m-0"><i class="fas fa-heart ani-heartbeat"></i> OpenBuilds CAM?</h6><br> Share it with your friends! They'll love it too!<br>
+              <h6 class="fg-obred m-0"><i class="fas fa-heart ani-heartbeat"></i> OpenBuilds CAM?</h6><br> Share it with your friends! They'll love it too!<br>
               <a class="button m-1 small bg-facebook fg-white" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
               <a class="button m-1  small bg-twitter fg-white" href="https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
               <a class="button m-1  small bg-tumblr fg-white"
@@ -319,7 +296,7 @@
             </center>
 
           </div>
-          <div class="cell-7 p-2">
+          <div class="cell-9 p-2">
 
 
             <h1 class="mb-0 fg-openbuilds display3" id="openbuilds-cam">OpenBuilds CAM</h1>
@@ -327,7 +304,7 @@
             <hr>
             <h1><i class="fas fa-download"></i> Free Online Software</h1>
             <hr>
-            <div class="info-button bg-green fg-white bd-green">
+            <div class="info-button bg-obred fg-white bd-obred">
               <a href="https://cam.openbuilds.com" target="_new" class="button"><span class="fas fa-link"></span> Browse to</a>
               <a href="https://cam.openbuilds.com" target="_new" class="info">https://cam.openbuilds.com</a>
             </div>
@@ -397,20 +374,6 @@
                 </td>
               </tr>
 
-              <thead>
-                <tr>
-                  <th>
-                    <i class="fas fa-fw fa-history"></i> Changelog
-                  </th>
-                </tr>
-              </thead>
-              <tr>
-                <td>
-
-                  <div id="camchangelog" class="text-small"></div>
-
-                </td>
-              </tr>
 
             </table>
 
@@ -419,14 +382,9 @@
 
       </div><!--  end grid cam -->
 
-      <div class="row bg-darkGray mb-5">
-        <div class="cell-5 p-1">
-        </div>
-      </div>
-
-      <div class="row mb-5" id="terms-and-conditions">
-        <div class="cell-12 p-1">
-          <small class="fg-darkGray">
+      <div class="row mb-5 bg-black fg-white" id="terms-and-conditions">
+        <div class="cell-12 p-10">
+          <small>
 
             <h5>Terms and Conditions</h5>
 
