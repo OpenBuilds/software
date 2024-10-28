@@ -3,6 +3,8 @@ var alreadyDetected = false;
 var availableDriverVersion = 'v0.0.0'
 var installedDriver = 'not detected'
 
+
+
 function checkIfDriverIsInstalled() {
   // if (!alreadyDetected) {
   var url = "https://mymachine.openbuilds.com:3001/api/version"

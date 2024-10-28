@@ -99,36 +99,39 @@
         background-color: #ff0000;
       }
 
-      /* SM Buttons */
-
-      /* End SM Buttons */
+      .sticky-header {
+        position: -webkit-sticky;
+        /* For Safari */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: black;
+        /* Ensures background color continuity */
+        padding: 0;
+      }
     </style>
   </head>
 
   <body class="bg-white">
 
+    <div class="row bg-black sticky-header">
+      <div class="cell">
+        <img src="OpenBuildsSoftware.svg" />
+
+        <div class="navbar">
+          <a href="#openbuilds-control">OpenBuilds CONTROL</a>
+          <a href="#openbuilds-cam">OpenBuilds CAM</a>
+          <a href="https://us.openbuilds.com" target="_blank">Part Store</a>
+          <a href="https://docs.openbuilds.com" target="_blank">Documentation</a>
+          <a href="https://builds.openbuilds.com" target="_blank">Community</a>
+          <a href="https://support.openbuilds.com" target="_blank">Support</a>
+        </div>
+      </div>
+    </div>
+
     <div class="container-fluid">
 
       <div class="grid">
-
-        <div class="row bg-black">
-          <div class="cell">
-            <img src="OpenBuildsSoftware.svg" />
-          </div>
-        </div>
-
-        <div class="row bg-black p-0 mb-0">
-          <div class="cell">
-            <div class="navbar">
-              <a href="#openbuilds-control">OpenBuilds CONTROL</a>
-              <a href="#openbuilds-cam">OpenBuilds CAM</a>
-              <a href="https://us.openbuilds.com" target="_blank">Part Store</a>
-              <a href="https://docs.openbuilds.com" target="_blank">Documentation</a>
-              <a href="https://builds.openbuilds.com" target="_blank">Community</a>
-              <a href="https://support.openbuilds.com" target="_blank">Support</a>
-            </div>
-          </div>
-        </div>
 
         <div class="row">
           <div class="cell-3 p-2">
@@ -166,7 +169,6 @@
                 Reddit</a>
               <a class="button m-1  small bg-telegram fg-white" href="https://telegram.me/share/url?text=&amp;url=https%3A%2F%2Fsoftware.openbuilds.com" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i>
                 Telegram</a>
-
 
             </center>
 
@@ -478,6 +480,77 @@
     <script src="jquery.min.js"></script>
     <script src="metro4/js/metro.js"></script>
     <script src="index.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const tabs = document.querySelectorAll(".navbar a");
+
+        // Function to activate the current tab based on hash or scroll
+        function activateTabByHash() {
+          const hash = window.location.hash || "#openbuilds-control";
+          tabs.forEach(tab => {
+            tab.classList.toggle("active", tab.getAttribute("href") === hash);
+          });
+        }
+
+        // Scroll event listener to activate tab based on section in view
+        window.addEventListener("scroll", function() {
+          const controlSection = document.getElementById("openbuilds-control");
+          const camSection = document.getElementById("openbuilds-cam");
+
+          if (isInView(controlSection)) {
+            setActiveTab("#openbuilds-control");
+          } else if (isInView(camSection)) {
+            setActiveTab("#openbuilds-cam");
+          }
+        });
+
+        // Function to check if a section is in view
+        function isInView(element) {
+          const rect = element.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        // Function to set active tab
+        function setActiveTab(hash) {
+          tabs.forEach(tab => {
+            tab.classList.toggle("active", tab.getAttribute("href") === hash);
+          });
+        }
+
+        // Activate the correct tab on load
+        activateTabByHash();
+
+        // Update active tab on hash change
+        window.addEventListener("hashchange", activateTabByHash);
+      });
+
+      $(document).ready(function() {
+        // Set up click event for navbar links
+        $(".navbar a[href^='#']").on("click", function(e) {
+          e.preventDefault();
+
+          // Get the target section's ID from the href attribute
+          var targetId = $(this).attr("href");
+          var targetElement = $(targetId);
+
+          if (targetElement.length) {
+            // Calculate the offset by getting the sticky header's height
+            var headerHeight = $(".sticky-header").outerHeight();
+
+            // Scroll to the target element with offset
+            $("html, body").animate({
+              scrollTop: targetElement.offset().top - headerHeight
+            }, 500); // Adjust duration as needed
+          }
+        });
+      });
+    </script>
 
   </body>
 
