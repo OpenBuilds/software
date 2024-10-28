@@ -67,6 +67,38 @@
         color: #ff0000;
       }
 
+      /* Navbar container */
+      .navbar {
+        background-color: #000;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        margin: 0px;
+      }
+
+      /* Navbar links styled as tabs */
+      .navbar a {
+        color: #fff;
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        text-decoration: none;
+        padding: 0 15px;
+        height: 48px;
+        line-height: 48px;
+        display: inline-block;
+      }
+
+      /* Hover effect */
+      .navbar a:hover {
+        background-color: #ff0000;
+      }
+
+      /* Hover effect */
+      .navbar a.active {
+        background-color: #ff0000;
+      }
+
       /* SM Buttons */
 
       /* End SM Buttons */
@@ -80,17 +112,23 @@
       <div class="grid">
 
         <div class="row bg-black">
-          <div class=" cell m-2">
-            <img height="100" src="OpenBuildsSoftware.svg" />
+          <div class="cell">
+            <img src="OpenBuildsSoftware.svg" />
           </div>
         </div>
 
-
-        <div class="row bg-black mb-5">
-          <div class="cell-5 p-1">
+        <div class="row bg-black p-0 mb-0">
+          <div class="cell">
+            <div class="navbar">
+              <a href="#openbuilds-control">OpenBuilds CONTROL</a>
+              <a href="#openbuilds-cam">OpenBuilds CAM</a>
+              <a href="https://us.openbuilds.com" target="_blank">Part Store</a>
+              <a href="https://docs.openbuilds.com" target="_blank">Documentation</a>
+              <a href="https://builds.openbuilds.com" target="_blank">Community</a>
+              <a href="https://support.openbuilds.com" target="_blank">Support</a>
+            </div>
           </div>
         </div>
-
 
         <div class="row">
           <div class="cell-3 p-2">
@@ -136,10 +174,10 @@
           <div class="cell-9 p-2">
 
 
-            <h1 class="mb-0 fg-openbuilds display3" id="openbuilds-control">OpenBuilds CONTROL</h1>
+            <h1 class="mb-0 fg-black display3" id="openbuilds-control">OpenBuilds CONTROL</h1>
             <p class="text-secondary mt-0 mb-1">OpenBuilds CONTROL is a FREE application for connecting to, and controlling, your CNC, Laser, Plasma or Dragknife machine.</p>
             <hr>
-            <h1><i class="fas fa-download"></i> Free Download</h1>
+            <h2><i class="fas fa-download"></i> Free Download</h2>
             <hr>
             <nav data-role="ribbonmenu">
               <ul class="tabs-holder">
@@ -199,18 +237,18 @@
               <tr>
                 <td>
 
-                  <p class="text-small">OpenBuilds CONTROL will allow you to
+                  <p>OpenBuilds CONTROL will allow you to
                     <ul>
-                      <li class="text-small">Interface with, and Jog your machine</li>
-                      <li class="text-small">Run GCODE Jobs</li>
-                      <li class="text-small">Set Zero coordinates</li>
-                      <li class="text-small">Run Probing Operations</li>
-                      <li class="text-small">Integrate with <a href="https://cam.openbuilds.com" target="_new">cam.openbuilds.com</a></li>
-                      <li class="text-small">Flatten/Surface your spoilboard / stock</li>
-                      <li class="text-small">Calibrate your machine</li>
-                      <li class="text-small">Load Machine Profiles and customize Settings</li>
-                      <li class="text-small">Perform Firmware Updates</li>
-                      <li class="text-small">Design your own fully interactive Javascript Macro buttons</li>
+                      <li>Interface with, and Jog your machine</li>
+                      <li>Run GCODE Jobs</li>
+                      <li>Set Zero coordinates</li>
+                      <li>Run Probing Operations</li>
+                      <li>Integrate with <a href="https://cam.openbuilds.com" target="_new">cam.openbuilds.com</a></li>
+                      <li>Flatten/Surface your spoilboard / stock</li>
+                      <li>Calibrate your machine</li>
+                      <li>Load Machine Profiles and customize Settings</li>
+                      <li>Perform Firmware Updates</li>
+                      <li>Design your own fully interactive Javascript Macro buttons</li>
                     </ul>
                   </p>
                 </td>
@@ -227,7 +265,7 @@
 
                   <ul>
 
-                    <li class="text-small">
+                    <li>
 
                       Documentation:<br>
                       Check out the <a href="https://docs.openbuilds.com/doku.php?id=docs:software:overview" target="_new"><i class="fas fa-atlas"></i> OpenBuilds Software Documentation </a>
@@ -237,7 +275,7 @@
                     <hr class="hr">
 
 
-                    <li class="text-small">
+                    <li>
 
                       Have a question?<br>
                       Check out the <a href="https://openbuilds.com/threads/openbuilds-control-software.13121/" target="_new"><i class="far fa-comments"></i> OpenBuilds CONTROL support thread on OpenBuilds.com/Forums </a>
@@ -299,10 +337,10 @@
           <div class="cell-9 p-2">
 
 
-            <h1 class="mb-0 fg-openbuilds display3" id="openbuilds-cam">OpenBuilds CAM</h1>
+            <h1 class="mb-0 fg-black display3" id="openbuilds-cam">OpenBuilds CAM</h1>
             <p class="text-secondary mt-0 mb-1">OpenBuilds CAM is a FREE web-based application for converting SVG, DXF and Bitmap drawings, to GCODE for use with your CNC, Laser, Plasma or Dragknife Machine</p>
             <hr>
-            <h1><i class="fas fa-download"></i> Free Online Software</h1>
+            <h2><i class="fas fa-download"></i> Free Online Software</h2>
             <hr>
             <div class="info-button bg-obred fg-white bd-obred">
               <a href="https://cam.openbuilds.com" target="_new" class="button"><span class="fas fa-link"></span> Browse to</a>
@@ -325,13 +363,13 @@
               <tr>
                 <td>
 
-                  <p class="text-small">OpenBuilds CAM will allow you to
+                  <p>OpenBuilds CAM will allow you to
                     <ul>
-                      <li class="text-small">Import DXF/SVG/PNG/BMP/JPG/Gerber/Excellon files</li>
-                      <li class="text-small">Import from a built-in Parts Library</li>
-                      <li class="text-small">Setup toolpaths for CNC Routing, Laser cutting, Plasma Cutting and Dragknives</li>
-                      <li class="text-small">Generate GCODE</li>
-                      <li class="text-small">Send GCODE to OpenBuilds CONTROL</li>
+                      <li>Import DXF/SVG/PNG/BMP/JPG files</li>
+                      <li>Import from a built-in Parts and Icons Libraries</li>
+                      <li>Setup toolpaths for CNC Routing, Laser cutting, Plasma Cutting and Dragknives</li>
+                      <li>Generate GCODE</li>
+                      <li>Send GCODE to OpenBuilds CONTROL</li>
                     </ul>
                   </p>
                 </td>
@@ -348,7 +386,7 @@
 
                   <ul>
 
-                    <li class="text-small">
+                    <li>
 
                       Documentation:<br>
                       Check out the <a href="https://docs.openbuilds.com/doku.php?id=docs:software:overview" target="_new"><i class="fas fa-atlas"></i> OpenBuilds Software Documentation </a>
@@ -358,7 +396,7 @@
                     <hr class="hr">
 
 
-                    <li class="text-small">
+                    <li>
 
                       Have a question?<br>
                       Have a question? <a href="https://openbuilds.com/threads/openbuilds-cam-software.13122/" target="_new"><i class="far fa-comments"></i> OpenBuilds CAM support thread on OpenBuilds.com/Forums </a>
